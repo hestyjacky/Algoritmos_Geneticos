@@ -61,3 +61,52 @@ Para ejecutar los *notebooks* o scripts, necesitarás:
 
 ```bash
 pip install networkx pandas ipywidgets matplotlib
+```
+
+# Proyecto 2 - Optimizador de Forrado de Libros y Cuadernos
+
+Este es un caso de uso aplicado del algoritmo de optimización. Diseñado específicamente para negocios de papelería o servicios de forrado de libros, este script no solo acomoda rectángulos, sino que *calcula las dimensiones reales de corte* necesarias para forrar un libro basándose en su tamaño estándar y grosor.
+
+## Objetivo del Negocio
+Minimizar el desperdicio de papel (Contact, lustre, plástico) al forrar múltiples libros de diferentes tamaños en un rollo o pliego de dimensiones limitadas.
+
+## Características Específicas
+
+### 1. Cálculo de Despliegue (Unfolding)
+A diferencia del optimizador genérico, este sistema toma un objeto 3D (un libro cerrado) y calcula su área 2D necesaria para el forrado, incluyendo márgenes automáticos:
+- *Desglose:* Pestaña Izq + Tapa Trasera + Lomo + Tapa Delantera + Pestaña Der.
+- *Márgenes:* Agrega automáticamente 2cm de pestaña por lado para el doblado.
+- *Lomo Dinámico:* Permite definir si el encuadernado es de espiral (lomo ~2cm) o personalizado (ej. libros de texto gruesos).
+
+### 2. Catálogo de Tamaños Estándar
+Incluye una base de datos interna con medidas comunes de papelería para agilizar la entrada de datos:
+| Nombre | Medidas (cm) |
+| :--- | :--- |
+| *A4 / Letter* | 21 x 29.7 |
+| *A5 / Profesional* | 14.8 x 21 |
+| *A6 / A7* | Tamaños de bolsillo |
+| *Oficio / Folio* | 21.5 x 31.5 |
+
+### 3. Visualización 
+El gráfico generado es mucho más detallado. No solo muestra el corte, sino que dibuja las *líneas de doblado*:
+- *Gris muy claro:* Área de pestañas (márgenes).
+- *Azul/Naranja:* Tapas delantera y trasera.
+- *Gris oscuro:* Lomo del libro.
+
+<img width="369" height="392" alt="image" src="https://github.com/user-attachments/assets/ac4137c2-9743-4185-b8b3-5cbfaa374a2b" />
+
+
+## Lógica del Algoritmo
+Utiliza el mismo motor de *Algoritmo Genético*, pero con una capa de abstracción adicional:
+1.  *Entrada:* El usuario selecciona "Cuaderno Profesional (A4)".
+2.  *Transformación:* El sistema calcula: $Ancho = (21 \times 2) + Lomo + (2 \times 2)$.
+3.  *Optimización:* El algoritmo genético busca el mejor acomodo para estas nuevas dimensiones extendidas.
+
+
+## Requisitos e Instalación
+
+Este proyecto utiliza Python 3. 
+Para garantizar la correcta *visualización de los planos de corte* asegúrate de tener instalada la siguiente dependencia:
+
+```bash
+pip install matplotlib 
