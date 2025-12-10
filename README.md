@@ -43,7 +43,7 @@ $$
 
 El proyecto se basa en la topología de la red de Metro de Madrid, incluyendo todas sus líneas y estaciones de transbordo.
 
-
+![Plano del Metro de Madrid - 2000](Plano-Metro-de-Madrid-diciembre-de-2000-1.jpg)
 
 ## 📊 Comparativa de Rendimiento
 La tabla compara la eficiencia de los dos algoritmos evolutivos, resaltando que la diferencia en el tiempo de ejecución es una consecuencia directa de la complejidad de sus operadores matemáticos.
