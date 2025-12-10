@@ -1,10 +1,10 @@
 # 🚇 Metro Route Optimizer: Algoritmos Evolutivos Aplicados
 
-## ✨ Proyecto
+## Proyecto
 
 Este repositorio presenta un proyecto de optimización de rutas en la red de metro de Madrid utilizando dos metaheurísticas avanzadas: el **Algoritmo Genético (AG)** y el algoritmo de **Evolución Diferencial (ED)**. El objetivo es encontrar la ruta más eficiente entre dos puntos, minimizando una función de costo que penaliza la longitud del recorrido y el número de transbordos. El proyecto incluye dos implementaciones separadas, comparando su eficacia en la convergencia hacia el óptimo y su eficiencia en tiempo de ejecución.
 
-## 🎯 Funcionalidad Principal
+## Funcionalidad Principal
 
 El código está diseñado para simular un sistema de planificación de rutas inteligente. La funcionalidad central incluye:
 
@@ -13,7 +13,7 @@ El código está diseñado para simular un sistema de planificación de rutas in
 3.  **Optimización Evolutiva:** Aplicación del AG o ED para navegar el espacio de soluciones y encontrar la ruta que minimiza la penalización total (score).
 4.  **Generación de Resultados:** Muestra la ruta óptima encontrada, la secuencia de acciones (subir, seguir, transbordar), el **tiempo de ejecución**, y el **mejor *score* de aptitud**.
 
-## 🧬 Implementación del Algoritmo Genético (AG)
+## Implementación del Algoritmo Genético (AG)
 
 El archivo `Rutas_del_metro_A_Genetico` implementa el algoritmo genético tradicional.
 
@@ -27,7 +27,7 @@ El archivo `Rutas_del_metro_A_Genetico` implementa el algoritmo genético tradic
     * **Cruce (Crossover):** Intercambio de segmentos de ruta en un punto en común (o un punto aleatorio).
     * **Mutación:** Inserción de un sub-camino aleatorio o re-cableado de un segmento de la ruta.
 
-## 🔄 Implementación de Evolución Diferencial (ED)
+## Implementación de Evolución Diferencial (ED)
 
 El archivo `Rutas_del_metro_Differential_Evolution` implementa la optimización mediante Evolución Diferencial, un método metaheurístico robusto para la optimización global.
 
